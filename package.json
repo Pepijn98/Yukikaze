@@ -1,6 +1,6 @@
 {
-    "name": "@kurozero/interval",
-    "version": "0.1.0",
+    "name": "yukikaze",
+    "version": "0.1.1",
     "description": "A modern Interval implementation in TypeScript",
     "license": "MIT",
     "main": "lib/index",
@@ -19,12 +19,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/KurozeroPB/Interval.git"
+        "url": "git+https://github.com/KurozeroPB/Yukikaze.git"
     },
-    "homepage": "https://kurozeropb.github.io/Interval/",
+    "homepage": "https://kurozeropb.github.io/Yukikaze/",
     "bugs": {
         "email": "bugs@kurozeropb.info",
-        "url": "https://github.com/KurozeroPB/Interval/issues"
+        "url": "https://github.com/KurozeroPB/Yukikaze/issues"
     },
     "keywords": [
         "interval",
