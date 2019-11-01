@@ -1,0 +1,59 @@
+{
+    "name": "@kurozero/interval",
+    "version": "0.1.0",
+    "description": "A modern Interval implementation in TypeScript",
+    "license": "MIT",
+    "main": "lib/index",
+    "module": "lib/index.mjs",
+    "types": "lib/index.d.ts",
+    "engines": {
+        "node": ">=10.x"
+    },
+    "files": [
+        "lib"
+    ],
+    "author": {
+        "name": "Pepijn van den Broek <KurozeroPB>",
+        "email": "root@kurozeropb.info",
+        "url": "https://kurozeropb.info"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KurozeroPB/Interval.git"
+    },
+    "homepage": "https://kurozeropb.github.io/Interval/",
+    "bugs": {
+        "email": "bugs@kurozeropb.info",
+        "url": "https://github.com/KurozeroPB/Interval/issues"
+    },
+    "keywords": [
+        "interval",
+        "setInterval",
+        "timeout",
+        "setTimeout",
+        "typescript"
+    ],
+    "scripts": {
+        "prepare": "yarn clean && yarn run rollup:build && yarn run types:generate",
+        "rollup:build": "rollup -c",
+        "rollup:watch": "yarn run rollup:build -- --watch",
+        "types:generate": "dts-bundle-generator -o lib/index.d.ts src/index.ts",
+        "docs": "typedoc && cp .nojekyll docs/",
+        "reinstall": "rm -rf ./node_modules && rm ./yarn.lock && yarn install",
+        "clean": "rm -rf ./lib"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "12.12.3",
+        "@typescript-eslint/eslint-plugin": "^2.3.2",
+        "@typescript-eslint/parser": "^2.3.2",
+        "dts-bundle-generator": "^3.2.0",
+        "eslint": "^6.5.1",
+        "gts": "^1.1.0",
+        "rollup": "^1.23.0",
+        "rollup-plugin-typescript": "^1.0.1",
+        "tslib": "^1.10.0",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.3"
+    }
+}
