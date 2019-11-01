@@ -9,7 +9,7 @@ module.exports = {
     excludeExternals: true,
     excludeNotExported: true,
     readme: "README.md",
-    name: "Collection",
+    name: "Yukikaze",
     ignoreCompilerErrors: true,
     listInvalidSymbolLinks: true
 };
