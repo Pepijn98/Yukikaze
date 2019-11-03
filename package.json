@@ -1,6 +1,6 @@
 {
     "name": "yukikaze",
-    "version": "0.1.2",
+    "version": "0.1.5",
     "description": "A modern Interval implementation in TypeScript",
     "license": "MIT",
     "main": "lib/index",
@@ -34,11 +34,10 @@
         "typescript"
     ],
     "scripts": {
-        "prepare": "yarn clean && yarn rollup:build && yarn types:generate && yarn browserify",
+        "prepare": "yarn clean && yarn rollup:build && yarn types:generate && cp src/bundle.js lib/",
         "rollup:build": "rollup -c",
         "rollup:watch": "yarn rollup:build -- --watch",
         "types:generate": "dts-bundle-generator -o lib/index.d.ts src/index.ts",
-        "browserify": "browserify lib/index.js -o lib/index.min.js",
         "docs": "typedoc && cp .nojekyll docs/",
         "reinstall": "rm -rf ./node_modules && rm ./yarn.lock && yarn install",
         "clean": "rm -rf ./lib"
@@ -48,7 +47,6 @@
         "@types/node": "12.12.3",
         "@typescript-eslint/eslint-plugin": "^2.3.2",
         "@typescript-eslint/parser": "^2.3.2",
-        "browserify": "^16.5.0",
         "dts-bundle-generator": "^3.2.0",
         "eslint": "^6.5.1",
         "gts": "^1.1.0",
