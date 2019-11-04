@@ -3,24 +3,26 @@
         "target": "esnext",
         "module": "commonjs",
         "lib": [
-            "esnext"
+            "esnext",
+            "dom"
         ],
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
         "declaration": true,
-        "sourceMap": false,
+        "declarationDir": "./lib",
+        "outDir": "./lib/",
         "strict": true,
-        "rootDir": "src",
-        "outDir": "lib",
-        "noEmit": true
+        "esModuleInterop": true
     },
     "exclude": [
         "node_modules",
-        "examples"
-    ]
+        "lib",
+        "examples",
+        "**/*.test.ts",
+        "**/webpack.config.ts"
+    ],
+    "compilation": {
+        "compiler": {
+            "context": "./src",
+            "outputPath": "./lib"
+        }
+    }
 }
