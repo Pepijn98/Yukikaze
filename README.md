@@ -27,7 +27,7 @@
 # Yukikaze
 A modern Interval implementation in TypeScript
 
-`Browser`: \
+## Browser
 https://unpkg.com/yukikaze@{VERSION}/lib/index.min.js
 ```html
 <!DOCTYPE html>
@@ -52,9 +52,10 @@ https://unpkg.com/yukikaze@{VERSION}/lib/index.min.js
     </body>
 </html>
 ```
+<br/><br/>
 
-`Node:` \
-`yarn add yukikaze` or `npm i yukikaze`
+## Node
+`yarn add yukikaze` or `npm i --save yukikaze`
 ```js
 const { Interval } = require("yukikaze");
 
