@@ -1,5 +1,5 @@
 /// <reference types="node" />
-export declare class Interval {
+declare class Interval {
     baseline?: number;
     timer?: NodeJS.Timeout;
     /**
@@ -20,4 +20,4 @@ export declare class Interval {
      */
     stop(): void;
 }
-export default Interval;
+export = Interval;

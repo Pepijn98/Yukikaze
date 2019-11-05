@@ -57,7 +57,7 @@ https://unpkg.com/yukikaze@{VERSION}/lib/index.min.js
 ## Node
 `yarn add yukikaze` or `npm i --save yukikaze`
 ```js
-const { Interval } = require("yukikaze");
+const Interval = require("yukikaze");
 
 let i = 0;
 

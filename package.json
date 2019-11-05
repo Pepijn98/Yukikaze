@@ -1,6 +1,6 @@
 {
     "name": "yukikaze",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "A modern Interval implementation in TypeScript",
     "license": "MIT",
     "main": "lib/index",
@@ -37,20 +37,22 @@
         "build": "tsc && webpack --mode production",
         "docs": "typedoc && cp .nojekyll docs/",
         "reinstall": "rm -rf ./node_modules && rm ./yarn.lock && yarn install",
-        "clean": "rm -rf ./lib"
+        "clean": "rm -rf ./lib",
+        "test": "ts-node examples/example.ts",
+        "test:js": "node examples/example.js"
     },
     "dependencies": {},
     "devDependencies": {
-        "@types/node": "12.12.3",
+        "@types/node": "12.12.5",
         "@types/source-map": "^0.5.7",
         "@types/webpack": "^4.39.8",
-        "@typescript-eslint/eslint-plugin": "^2.3.2",
-        "@typescript-eslint/parser": "^2.3.2",
-        "eslint": "^6.5.1",
+        "@typescript-eslint/eslint-plugin": "^2.6.1",
+        "@typescript-eslint/parser": "^2.6.1",
+        "eslint": "^6.6.0",
         "gts": "^1.1.0",
         "ts-loader": "^6.2.1",
         "ts-node": "^8.4.1",
-        "typescript": "^3.6.3",
+        "typescript": "^3.6.4",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10"
     }

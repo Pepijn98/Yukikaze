@@ -1,4 +1,4 @@
-export class Interval {
+class Interval {
     public baseline?: number;
     public timer?: NodeJS.Timeout;
 
@@ -43,4 +43,4 @@ export class Interval {
     }
 }
 
-export default Interval;
+export = Interval;
