@@ -46,7 +46,7 @@ https://unpkg.com/yukikaze@{VERSION}/lib/index.min.js
         <script lang="javascript">
             let i = 0;
 
-            const interval = new yukikaze.Interval();
+            const interval = new Yukikaze();
             interval.run(() => console.log(i++), 2000);
         </script>
     </body>
@@ -57,11 +57,11 @@ https://unpkg.com/yukikaze@{VERSION}/lib/index.min.js
 ## Node
 `yarn add yukikaze` or `npm i --save yukikaze`
 ```js
-const Interval = require("yukikaze");
+const Yukikaze = require("yukikaze");
 
 let i = 0;
 
-const interval = new Interval();
+const interval = new Yukikaze();
 interval.run(() => console.log(i++), 2000);
 ```
 

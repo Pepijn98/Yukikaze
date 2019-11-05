@@ -16,7 +16,7 @@ const configCallback = (env: { [key: string]: string }, argv: webpack.Configurat
             filename: mode === "production" ? "[name].min.js" : "[name].js",
             path: path.resolve(__dirname, "lib"),
             libraryTarget: "umd",
-            library: "yukikaze",
+            library: "Yukikaze",
             umdNamedDefine: true,
         },
 

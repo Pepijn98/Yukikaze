@@ -1,6 +1,6 @@
 {
     "name": "yukikaze",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A modern Interval implementation in TypeScript",
     "license": "MIT",
     "main": "lib/index",
