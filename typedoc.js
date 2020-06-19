@@ -1,5 +1,5 @@
 module.exports = {
-    src: ["./src"],
+    inputFiles: ["./src"],
     mode: "file",
     includeDeclarations: true,
     tsconfig: "tsconfig.json",
