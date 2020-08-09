@@ -1,9 +1,10 @@
 /// <reference types="node" />
-declare class Interval {
+export declare class Interval {
+    #private;
+    active: boolean;
     baseline?: number;
     timer?: NodeJS.Timeout;
-    /** @private */
-    private first;
+    constructor();
     /**
      * @since 0.1.0 Created function
      * @since 0.3.0 Added `initial` param
@@ -24,4 +25,4 @@ declare class Interval {
      */
     stop(): void;
 }
-export = Interval;
+export default Interval;

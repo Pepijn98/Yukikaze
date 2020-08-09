@@ -1,12 +1,12 @@
 {
     "name": "yukikaze",
-    "version": "0.3.0",
+    "version": "1.0.0",
     "description": "A modern Interval implementation in TypeScript",
     "license": "MIT",
     "main": "lib/index",
     "types": "lib/index.d.ts",
     "engines": {
-        "node": ">=10.x"
+        "node": ">=12.x"
     },
     "files": [
         "lib"
@@ -33,27 +33,33 @@
         "typescript"
     ],
     "scripts": {
-        "prepare": "npm run clean && npm run build",
+        "prepare": "yarn clean-build && yarn build",
         "build": "tsc && webpack --mode production",
+        "clean-build": "rm -rf ./lib",
         "docs": "typedoc && cp .nojekyll docs/",
-        "reinstall": "rm -rf ./node_modules && rm ./package-lock.json && npm install",
-        "clean": "rm -rf ./lib",
+        "reinstall": "yarn clean && yarn",
+        "clean": "rm -rf ./node_modules ./package-lock.json ./yarn.lock",
         "test": "ts-node examples/example.ts",
         "test:js": "node examples/example.js"
     },
     "dependencies": {},
     "devDependencies": {
-        "@types/node": "14.0.13",
+        "@babel/core": "^7.11.1",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-typescript": "^7.10.4",
+        "@types/node": "14.0.27",
         "@types/source-map": "^0.5.7",
-        "@types/webpack": "^4.41.17",
-        "@typescript-eslint/eslint-plugin": "^3.3.0",
-        "@typescript-eslint/parser": "^3.3.0",
-        "eslint": "^7.2.0",
+        "@types/webpack": "^4.41.21",
+        "@typescript-eslint/eslint-plugin": "^3.8.0",
+        "@typescript-eslint/parser": "^3.8.0",
+        "babel-loader": "^8.1.0",
+        "eslint": "^7.6.0",
         "gts": "^2.0.2",
-        "ts-loader": "^7.0.5",
+        "ts-loader": "^8.0.2",
         "ts-node": "^8.10.2",
-        "typescript": "^3.9.5",
-        "webpack": "^4.43.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12"
     }
 }

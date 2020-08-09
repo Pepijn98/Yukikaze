@@ -1,9 +1,13 @@
-class Interval {
+export class Interval {
+    public active: boolean;
     public baseline?: number;
     public timer?: NodeJS.Timeout;
 
-    /** @private */
-    private first = true;
+    #first = true;
+
+    constructor() {
+        this.active = false;
+    }
 
     /**
      * @since 0.1.0 Created function
@@ -22,8 +26,8 @@ class Interval {
             this.baseline = new Date().getTime();
         }
 
-        if ((initial && this.first) || !this.first) fn();
-        if (this.first) this.first = false;
+        if ((initial && this.#first) || !this.#first) fn();
+        if (this.#first) this.#first = false;
 
         const end = new Date().getTime();
         this.baseline += duration;
@@ -34,6 +38,7 @@ class Interval {
         }
 
         this.timer = setTimeout(() => this.run(fn, duration), nextTick);
+        this.active = true;
         return this.timer;
     }
 
@@ -45,8 +50,16 @@ class Interval {
     stop(): void {
         if (this.timer) {
             clearTimeout(this.timer);
+            this.timer = undefined;
+            this.active = false;
         }
     }
 }
 
-export = Interval;
+export default Interval;
+/**
+ * export default only creates `exports.default = Interval;`
+ * which is very ugly and impractical syntax in javascript so we add a module.exports
+ * imo export default should be transpiled to module.exports
+ */
+module.exports = Interval;

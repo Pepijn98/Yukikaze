@@ -7,11 +7,9 @@ const configCallback = (env: { [key: string]: string }, argv: webpack.Configurat
 
     const config: webpack.Configuration = {
         mode,
-
         entry: {
             "index": "./src/index.ts",
         },
-
         output: {
             filename: mode === "production" ? "[name].min.js" : "[name].js",
             path: path.resolve(__dirname, "lib"),
@@ -19,15 +17,13 @@ const configCallback = (env: { [key: string]: string }, argv: webpack.Configurat
             library: "Yukikaze",
             umdNamedDefine: true,
         },
-
         resolve: {
             extensions: [".ts", ".tsx", ".js"],
         },
-
         module: {
             rules: [{
                 test: /\.tsx?$/,
-                loader: "ts-loader",
+                loader: "babel-loader",
                 exclude: /node_modules/,
             }],
         },
